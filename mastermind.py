@@ -114,4 +114,5 @@ if turn == chances:
     print_mastermind_board(user_try, code_to_guess, the_hint)
     print("-----------------------------------------")
     print("LOSE")
+    print("The code was: ", user_try)
     print("-----------------------------------------")
