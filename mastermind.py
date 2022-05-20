@@ -23,13 +23,12 @@ def create_code():
     user_try = colors[:4]
     print("The code is: ", user_try)
     result_2 = input("is it good ? (y/n)\n")
-    if result_2 == "n":
-        create_code()
-    elif result_2 == "y":
-        return (user_try)
-    else:
-        print("error")
-        create_code()
+    while result_2 == "y":
+        random.shuffle(colors)
+        user_try = colors[:4]
+        print("The code is: ", user_try)
+        result_2 = input("is it good ? (y/n)\n")
+    return (user_try)
 
 if __name__ == '__main__':
     colors = ["RED", "GREEN", "YELLOW", "BLUE", "BLACK", "MAGENTA"]
